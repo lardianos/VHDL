@@ -13,6 +13,7 @@ entity reg4_4bit is
 			wAddr	:	in std_logic_vector(adrw-1 downto 0);
 			we 		:	in std_logic;
 			clk 	:	in std_logic;
+			reset 	:	in std_logic;
 			B		:	out std_logic_vector(dw-1 downto 0);
 			C 		:	out std_logic_vector(dw-1 downto 0));
 end reg4_4bit;
@@ -24,7 +25,11 @@ begin
     m1 : process(clk)
     begin
         if (clk'event and clk='0') then
-			if we='1' then
+			if reset='1' then
+				forloop : for i in 0 to 3 loop
+					regfile(i) <= "0000";
+				end loop;
+			elsif we='1' then
 				regfile(to_integer(unsigned(wAddr))) <= A;
 			elsif we='0' then
 				C <= regfile(to_integer(unsigned(rAddr1)));
