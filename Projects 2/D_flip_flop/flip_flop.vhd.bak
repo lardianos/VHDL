@@ -1,0 +1,20 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity flipflop is port (
+	D 	: in bit;
+	CLK 	: in bit;
+	Q	: out bit);
+end flipflop;
+
+architecture dataflow of flipflop is
+begin
+	main:process(CLK) is
+	begin
+		case (CLK'EVENT AND CLK) is
+			when '1' =>
+				Q <= D;
+			when others =>
+		end case;				
+	end process main;
+end architecture dataflow;

@@ -1,0 +1,30 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all;
+
+entity test_dec is
+end test_dec;
+
+architecture test_b of test_dec is
+signal A1: std_logic_vector(2 downto 1);
+signal D1: std_logic_vector(4 downto 1);
+
+component dec2to4 port (	a:	in std_logic_vector(4 downto 1);
+				d:	out std_logic_vector(4 downto 1));
+end component;
+begin	
+	M1:dec2to4 PORT MAP(a=>A1, d=>D1);
+	process
+	begin
+		A1 <= "00"; wait for 20 ps;
+		--force -freeze sim:/test_mdec/S1 11 0
+		--force /A1 "00" 20 ps
+		--force /A1 01 20 ps
+		--force /A1 10 20 ps
+		--force /A1 11 20 ps
+		
+		--force a 00 20 ps;
+		--force a 01 20 ps;
+		--force a 10 20 ps;
+		--force a 11 20 ps;
+	end process;
+end test_b;
