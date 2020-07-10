@@ -1,0 +1,89 @@
+$date
+  Fri Jun 05 20:47:24 2020
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module std_logic_arith $end
+$upscope $end
+$scope module std_logic_unsigned $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module test_alu $end
+$var reg 4 ! ain1[3:0] $end
+$var reg 4 " ain2[3:0] $end
+$var reg 4 # actrl[3:0] $end
+$var reg 4 $ aout[3:0] $end
+$var reg 1 % zero1 $end
+$scope module m1 $end
+$var reg 4 & aluin1[3:0] $end
+$var reg 4 ' aluin2[3:0] $end
+$var reg 4 ( aluctrl[3:0] $end
+$var reg 4 ) aluout1[3:0] $end
+$var reg 1 * zero $end
+$var reg 1 + sig_zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0010 !
+b0100 "
+b0010 #
+b0110 $
+0%
+b0010 &
+b0100 '
+b0010 (
+b0110 )
+0*
+0+
+#100000000
+b0100 !
+b1111 "
+b0000 #
+b0100 $
+b0100 &
+b1111 '
+b0000 (
+b0100 )
+#200000000
+b0001 #
+b1111 $
+b0001 (
+b1111 )
+#300000000
+b0010 "
+b0110 #
+b0010 $
+b0010 '
+b0110 (
+b0010 )
+#400000000
+b0110 "
+b1110 $
+b0110 '
+b1110 )
+#500000000
+b0111 #
+b0001 $
+b0111 (
+b0001 )
+#600000000
+b0000 !
+b0000 #
+b0000 $
+1%
+b0000 &
+b0000 (
+b0000 )
+1*
+1+
+#700000000
