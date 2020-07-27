@@ -4,7 +4,7 @@ Basic codes
 Useful commands
 
 # ghdl -s name.vhd //Syntax Analisys
-# ghdl -s --ieee=synopsys .\reg4.vhd ////Syntax Analisys
+# ghdl -s --ieee=synopsys .\name.vhd ////Syntax Analisys
 # ghdl -a name.vhd //Alalise
 # ghdl -a --ieee=synopsys name.vhd //Analise
 # ghdl -e test_entity_name //elaborate
